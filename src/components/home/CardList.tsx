@@ -1,9 +1,10 @@
 import { getCards } from "@/remote/card";
-import ListRow from "@shared/ListRow";
 import { useInfiniteQuery } from "react-query";
 import { flatten } from "lodash";
 import { useCallback } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Badge from "@shared/Badge";
+import ListRow from "@shared/ListRow";
 
 export default function CardList() {
   const {
@@ -42,7 +43,7 @@ export default function CardList() {
             contents={
               <ListRow.Texts title={`${index + 1}위`} subTitle={card.name} />
             }
-            right={card.payback ? <div>{card.payback}</div> : null}
+            right={card.payback ? <Badge label={card.payback} /> : null}
             withArrow={true}
             onClick={() => {}}
           />
