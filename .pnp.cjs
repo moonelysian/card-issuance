@@ -48,6 +48,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:5.1.3"],\
           ["eslint-plugin-react", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:7.33.2"],\
           ["firebase", "npm:10.7.2"],\
+          ["framer-motion", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:11.0.3"],\
           ["lodash", "npm:4.17.21"],\
           ["prettier", "npm:3.2.4"],\
           ["react", "npm:18.2.0"],\
@@ -3706,6 +3707,14 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@emotion/is-prop-valid", [\
+      ["npm:0.8.8", {\
+        "packageLocation": "../../.yarn/berry/cache/@emotion-is-prop-valid-npm-0.8.8-261a0f2426-10c0.zip/node_modules/@emotion/is-prop-valid/",\
+        "packageDependencies": [\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@emotion/memoize", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:1.2.1", {\
         "packageLocation": "../../.yarn/berry/cache/@emotion-is-prop-valid-npm-1.2.1-794afe6a94-10c0.zip/node_modules/@emotion/is-prop-valid/",\
         "packageDependencies": [\
@@ -3716,6 +3725,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@emotion/memoize", [\
+      ["npm:0.7.4", {\
+        "packageLocation": "../../.yarn/berry/cache/@emotion-memoize-npm-0.7.4-5648cf11b8-10c0.zip/node_modules/@emotion/memoize/",\
+        "packageDependencies": [\
+          ["@emotion/memoize", "npm:0.7.4"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:0.8.1", {\
         "packageLocation": "../../.yarn/berry/cache/@emotion-memoize-npm-0.8.1-9b1e35ff15-10c0.zip/node_modules/@emotion/memoize/",\
         "packageDependencies": [\
@@ -8430,6 +8446,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:5.1.3"],\
           ["eslint-plugin-react", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:7.33.2"],\
           ["firebase", "npm:10.7.2"],\
+          ["framer-motion", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:11.0.3"],\
           ["lodash", "npm:4.17.21"],\
           ["prettier", "npm:3.2.4"],\
           ["react", "npm:18.2.0"],\
@@ -11319,6 +11336,34 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/fraction.js-npm-4.3.7-c2c7e95a8e-10c0.zip/node_modules/fraction.js/",\
         "packageDependencies": [\
           ["fraction.js", "npm:4.3.7"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["framer-motion", [\
+      ["npm:11.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/framer-motion-npm-11.0.3-b536c483a1-10c0.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:11.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:11.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-27d774d49a/3/.yarn/berry/cache/framer-motion-npm-11.0.3-b536c483a1-10c0.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:11.0.3"],\
+          ["@emotion/is-prop-valid", "npm:0.8.8"],\
+          ["@types/react", "npm:18.2.48"],\
+          ["@types/react-dom", "npm:18.2.18"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:fcee6796717c38e053711d1e6ba2cc4d79ab5295f07505d2d74ce3189e058603f3a06069622b2b43d96c7d652f9a97f6dbd54bbdac6a15e754d7bafdb21233fa#npm:18.2.0"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
