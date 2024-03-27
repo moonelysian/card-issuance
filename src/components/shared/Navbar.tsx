@@ -1,28 +1,37 @@
 import { css } from "@emotion/react";
-import { Link, useLocation } from "react-router-dom";
-
 import { useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 import { colors } from "@styles/colorPalette";
 import Flex from "@shared/FlexBox";
 import Button from "@shared/Button";
+import { auth } from "@remote/firebase";
+import useUser from "@hooks/auth/useUser";
 
 function Navbar() {
   const location = useLocation();
   const showSignButton =
     ["/signup", "/signin"].includes(location.pathname) === false;
+  const user = useUser();
+
+  const handleLogout = useCallback(() => {
+    signOut(auth);
+  }, []);
 
   const renderButton = useCallback(() => {
+    if (user !== null) {
+      return <Button onClick={handleLogout}>로그아웃</Button>;
+    }
     if (showSignButton) {
       return (
-        <Link to="/signup">
+        <Link to="/signin">
           <Button>로그인/회원가입</Button>
         </Link>
       );
     }
-
     return null;
-  }, [showSignButton]);
+  }, [handleLogout, showSignButton, user]);
 
   return (
     <Flex justify="space-between" align="center" css={navbarContainerStyles}>
