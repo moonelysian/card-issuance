@@ -18,7 +18,7 @@ function SigninPage() {
 
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        navigate("/");
+        navigate(-1);
       } catch (e) {
         // firebase 의 에러
         if (e instanceof FirebaseError) {
