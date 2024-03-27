@@ -4,8 +4,8 @@ import {
   InputHTMLAttributes,
   useState,
 } from "react";
-import Input from "./Input";
 import Text from "./Text";
+import Input from "./Input";
 
 interface TextFieldProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: React.ReactNode;
@@ -19,7 +19,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
     ref,
   ) {
     const [focused, setFocused] = useState(false);
-    const labelColor = hasError ? "red" : focused ? "blue" : "grey";
+    const labelColor = hasError ? "red" : focused ? "blue" : undefined;
 
     const handleFocus: FocusEventHandler<HTMLInputElement> = (event) => {
       setFocused(true);
@@ -32,7 +32,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
 
     return (
       <div>
-        {label && (
+        {label ? (
           <Text
             typography="t7"
             color={labelColor}
@@ -41,7 +41,8 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           >
             {label}
           </Text>
-        )}
+        ) : null}
+
         <Input
           ref={ref}
           aria-invalid={hasError}
@@ -49,7 +50,8 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           onBlur={handleBlur}
           {...props}
         />
-        {hasError && (
+
+        {helpMessage ? (
           <Text
             typography="t7"
             color={labelColor}
@@ -58,7 +60,7 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
           >
             {helpMessage}
           </Text>
-        )}
+        ) : null}
       </div>
     );
   },
