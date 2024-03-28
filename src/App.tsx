@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "@pages/Home";
 import TestPage from "@pages/Test";
@@ -6,6 +7,7 @@ import SigninPage from "@pages/Signin";
 import SignupPage from "@pages/Signup";
 import ScrollToTop from "@shared/ScrollToTop";
 import ApplyPage from "@pages/Apply";
+import ApplyDone from "@pages/ApplyDone";
 import Navbar from "@shared/Navbar";
 import PrivateRoute from "@components/auth/PrivateRoute";
 
@@ -23,7 +25,17 @@ function App() {
           path="/apply/:id"
           element={
             <PrivateRoute>
-              <ApplyPage />
+              <Suspense fallback={<></>}>
+                <ApplyPage />
+              </Suspense>
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apply/done"
+          element={
+            <PrivateRoute>
+              <ApplyDone />
             </PrivateRoute>
           }
         />
